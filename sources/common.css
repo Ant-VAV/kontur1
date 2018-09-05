@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'kontur';
+    src: url('font.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 10px;
+}
+
+main {
+    display: flex;
+
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', sans-serif;
+    
+    line-height: 2rem;
+    min-height: 100%;
+}
+
+/* Чтобы видеть границы всех блоков: */
+/* body {
+    border: 1px solid pink;
+}
+
+div {
+    border: 1px dotted blue;
+}
+
+main {
+    border: 1px dotted red;
+}
+
+section {
+    border: 1px dashed black;
+} */
+/* Конец границ всех блоков. */

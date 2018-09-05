@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>SKB Kontur Test Task</title>
+  <link rel="stylesheet" href="sources/common.css">
+  <link rel="stylesheet" href="sources/left-side.css">
+  <link rel="stylesheet" href="sources/right-side.css">
+</head>
+
+<body>
+  <main>
+    <section class="left-side">
+      <div class="matrix-action">
+        <button type="button" class="button button-multiply" button-multiply>Умножить матрицы</button>
+      </div>
+
+      <div class="matrix-abilities">
+        <button type="button" class="button button-clear"> Очистить матрицы</button>
+        <button type="button" class="button button-vice-versa"> Поменять матрицы местами</button>
+      </div>
+
+      <div class="matrix-setup">
+        <div class="matrix-selection">
+          <input type="radio" name="matrix-selector" id="matrix-a-radio" checked>
+          <label for="matrix-a-radio">Матрица А</label>
+          <input type="radio" name="matrix-selector" id="matrix-b-radio">
+          <label for="matrix-b-radio">Матрица В</label>
+        </div>
+
+        <div class="matrix-editing matrix-edit-row">
+          <button type="button" class="button button-add"> Добавить</button>
+          <button type="button" class="button button-delete"> Удалить</button>
+          <span>строку</span>
+        </div>
+
+        <div class="matrix-editing matrix-edit-col">
+          <button type="button" class="button button-add"> Добавить</button>
+          <button type="button" class="button button-delete"> Удалить</button>
+          <span>столбец</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-side">
+      <div class="matrix-calculated-matrix-a">
+        
+        <div class="matrix-calculated">
+          <div class="matrix-row" data-row-number="1">
+            <input class="matrix-field" type="text" placeholder="c1,1" data-col-number="1" disabled>
+          </div>
+        </div>
+        
+        <div class="matrix-a">
+          <div class="matrix-row" data-row-number="1">
+              <input class="matrix-field" type="text" placeholder="a1,1" data-col-number="1">
+          </div>
+        </div>
+      
+      </div>
+      <div class="matrix-b">
+        <div class="matrix-row" data-row-number="1">
+            <input class="matrix-field" type="text" placeholder="b1,1" data-col-number="1">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="sources/matrix-generator.js"></script>
+</body>
+
+</html>

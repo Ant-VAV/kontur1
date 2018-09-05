@@ -1,0 +1,74 @@
+/* html {
+    font-size: 10px;
+} */
+
+.right-side {
+    flex: 1 1 auto;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.matrix-calculated-matrix-a {
+    display: flex;
+}
+
+.matrix-calculated,
+.matrix-a,
+.matrix-b {
+    position: relative;
+    margin: 2rem 0.5rem 2.5rem 4.5rem;
+}
+
+.matrix-a::after, 
+.matrix-b::after {
+    position: absolute;
+    font-size: 2.5rem;
+}
+
+.matrix-a::after {
+    content: "A";
+    top: calc(50% - 1rem);
+    right: -2.5rem;
+}
+
+.matrix-b::after {
+    content: "B";
+    right: calc(50% - 1rem);
+    bottom: -2.5rem;
+}
+
+.matrix-calculated {
+    outline: 0.2rem solid black;
+    outline-offset: 0.3rem;
+}
+
+/* .matrix-calculated::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    border: 0.2rem solid black;
+    border-right-color: transparent;
+    height: 5.8rem;
+    width: 0.8rem;
+} */
+
+.matrix-row {
+    font-size: 0; /*Т.к. из-за перевода строки после захардкоженого input-а немного смещается первый ряд. */
+    white-space: nowrap;
+
+}
+
+.matrix-field {
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    margin: 0.5rem;
+}
+
+span {
+    height: 100%;
+    vertical-align: middle;
+}
