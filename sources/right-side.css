@@ -56,9 +56,7 @@
 } */
 
 .matrix-row {
-    font-size: 0; /*Т.к. из-за перевода строки после захардкоженого input-а немного смещается первый ряд. */
     white-space: nowrap;
-
 }
 
 .matrix-field {

@@ -1,6 +1,16 @@
-let matrixAClassName = 'matrix-a';
-let matrixBClassName = 'matrix-b';
-let matrixCalcClassName = 'matrix-calculated';
+const matrixAClassName = 'matrix-a';
+const matrixBClassName = 'matrix-b';
+const matrixCalcClassName = 'matrix-calculated';
+
+// Генерируем начальные минимальные матрицы
+for (let i = 0; i < 2; i++) {
+    appendRow(matrixAClassName);
+    appendRow(matrixCalcClassName);
+    appendRow(matrixBClassName);
+    appendCol(matrixAClassName);
+    appendCol(matrixBClassName);
+    appendCol(matrixCalcClassName);
+}
 
 document.querySelector('.matrix-edit-col .button-add').addEventListener('click', function () {
     if (isMatrixASelected()) {
@@ -52,7 +62,7 @@ function removeCol(matrixClassName) {
     let allRows = getMatrixRows(matrixClassName);
     document.querySelectorAll(`.${matrixClassName} .matrix-row`);
     let colsCount = getColsFromFirstRow(matrixClassName).length;
-    if (colsCount > 1) {
+    if (colsCount > 2) {
         for (let i = 0; i < allRows.length; i++) {
             allRows[i].removeChild(document.querySelector(`.${matrixClassName} .matrix-row:nth-of-type(${i + 1}) .matrix-field:nth-of-type(${colsCount})`));
         }
@@ -73,7 +83,7 @@ function appendRow(matrixClassName) {
 
 function removeRow(matrixClassName) {
     let allRows = document.querySelectorAll(`.${matrixClassName} .matrix-row`);
-    if (allRows.length > 1) {
+    if (allRows.length > 2) {
         let lastRowIndex = allRows.length - 1;
         document.querySelector(`.${matrixClassName}`).removeChild(allRows[lastRowIndex]);
     }

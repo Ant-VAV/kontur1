@@ -14,6 +14,10 @@ button {
     padding: 3rem 5.5rem 3rem 3rem;
 }
 
+.left-side-warning {
+    background-color: #f6c1c0;
+}
+
 .button {
     border: 0.1rem solid rgba(0, 0, 0, 0.3);
     border-radius: 0.2rem;
@@ -115,4 +119,15 @@ button {
 span {
     vertical-align: middle;
     margin-left: 0.5rem;
+}
+
+.warning {
+    display: none;
+    margin-top: 5rem;
+    max-width: 22rem;
+    color: #da0902;
+}
+
+.warning-visible {
+    display: unset;
 }

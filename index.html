@@ -41,32 +41,27 @@
           <span>столбец</span>
         </div>
       </div>
+
+      <div class="warning warning-multiply">
+        Нельзя матрицы перемножать эти, - Йода говорит. - Размеры не подобают деянию.
+      </div>
+      <div class="warning warning-vice-versa">
+        Нельзя сотворить это. Сам попробуй транспонировать разные размерности.
+      </div>
     </section>
 
     <section class="right-side">
       <div class="matrix-calculated-matrix-a">
-        
-        <div class="matrix-calculated">
-          <div class="matrix-row" data-row-number="1">
-            <input class="matrix-field" type="text" placeholder="c1,1" data-col-number="1" disabled>
-          </div>
-        </div>
-        
-        <div class="matrix-a">
-          <div class="matrix-row" data-row-number="1">
-              <input class="matrix-field" type="text" placeholder="a1,1" data-col-number="1">
-          </div>
-        </div>
-      
+        <div class="matrix-calculated"></div>
+        <div class="matrix-a"></div>
       </div>
-      <div class="matrix-b">
-        <div class="matrix-row" data-row-number="1">
-            <input class="matrix-field" type="text" placeholder="b1,1" data-col-number="1">
-        </div>
-      </div>
+
+      <div class="matrix-b"></div>
     </section>
   </main>
   <script src="sources/matrix-generator.js"></script>
+  <script src="sources/matrix-multiply.js"></script>
+  <script src="sources/matrix-repair.js"></script>
 </body>
 
 </html>
