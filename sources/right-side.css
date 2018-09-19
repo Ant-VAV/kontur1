@@ -18,7 +18,17 @@
 .matrix-a,
 .matrix-b {
     position: relative;
-    margin: 2rem 0.5rem 2.5rem 4.5rem;
+    margin:1.7rem 0.2rem 2.2rem 4.2rem;
+    padding: 0.3rem;
+
+    background-image: 
+        linear-gradient(to right, black 0.8rem, transparent 0.8rem, transparent calc(100% - 0.8rem), black calc(100% - 0.8rem)),
+        linear-gradient(to right, black 0.8rem, transparent 0.8rem, transparent calc(100% - 0.8rem), black calc(100% - 0.8rem)),
+        linear-gradient(to bottom, black, black),
+        linear-gradient(to bottom, black, black);
+    background-size: 100% 0.2rem, 100% 0.2rem, 0.2rem 100%, 0.2rem 100%;
+    background-position: 0 0, 0 bottom, 0 0, right 0;
+    background-repeat: no-repeat;
 }
 
 .matrix-a::after, 
@@ -35,14 +45,14 @@
 
 .matrix-b::after {
     content: "B";
-    right: calc(50% - 1rem);
+    right: calc(50% - 0.8rem);
     bottom: -2.5rem;
 }
 
-.matrix-calculated {
+/* .matrix-calculated {
     outline: 0.2rem solid black;
     outline-offset: 0.3rem;
-}
+} */
 
 /* .matrix-calculated::before {
     content: "";
