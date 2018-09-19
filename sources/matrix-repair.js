@@ -9,6 +9,10 @@ document.querySelector('.button-vice-versa').addEventListener('click', function 
 function clearMatrixes() {
     clearOneMatrix(matrixAClassName);
     clearOneMatrix(matrixBClassName);
+    removeWarnings();
+}
+
+function removeWarnings() {
     document.querySelector('.left-side').classList.remove('left-side-warning');
     let warnings = document.querySelectorAll('.warning')
     for (warning of warnings) {
@@ -44,7 +48,6 @@ function swapMatrixes() {
             }
         }
     } else {
-        document.querySelector('.warning-vice-versa').classList.add('warning-visible');
-        makeLeftPanelRedAgain();
+        showWarningAndMakeLeftPanelRed('.warning-vice-versa');
     }
 }

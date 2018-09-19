@@ -98,16 +98,18 @@ function createEmptyMatrixRow(rowNumber) {
 }
 
 function createMatrixField(rowNumber, colNumber, prefix) {
-    let colElement = document.createElement('input');
-    colElement.classList.add('matrix-field');
-    colElement.setAttribute('type', 'text');
-    colElement.setAttribute('placeholder', `${prefix}${rowNumber},${colNumber}`);
-    colElement.setAttribute('data-col-number', colNumber);
+    let matrixField = document.createElement('input');
+    matrixField.classList.add('matrix-field');
+    matrixField.setAttribute('type', 'text');
+    matrixField.setAttribute('pattern', '(?:^10|^[0-9]{1})');
+    matrixField.setAttribute('maxlength', '2');
+    matrixField.setAttribute('placeholder', `${prefix}${rowNumber},${colNumber}`);
+    matrixField.setAttribute('data-col-number', colNumber);
     if (prefix === 'c') {
-        colElement.disabled = true;
+        matrixField.disabled = true;
     }
 
-    return colElement;
+    return matrixField;
 }
 
 function getFieldPrefixFromMatrixClass(matrixClassName) {
