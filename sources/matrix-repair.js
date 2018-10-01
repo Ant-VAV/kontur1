@@ -9,6 +9,7 @@ document.querySelector('.button-vice-versa').addEventListener('click', function 
 function clearMatrixes() {
     clearOneMatrix(matrixAClassName);
     clearOneMatrix(matrixBClassName);
+    clearOneMatrix(matrixCalcClassName);
     removeWarnings();
 }
 
